@@ -1,0 +1,19 @@
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">
+<img src="http://www.mariadcampbell.com/wp-content/uploads/2016/12/HTML5_CSS_JavaScript.png">
+<a class="muut" href="https://muut.com/i/presentation/comments" type="dynamic">presentation</a>
+<script src="//cdn.muut.com/1/moot.min.js"></script>
+<script>
+  $('#my-community').muut({
+    
+    api: {
+      // API key for "presentation"- community
+      key: '<%= Forum::MUUT_KEY %>',
+
+      // generate following on the server side (see below)
+      message: '<%= @forum.message %>',
+      signature: '<%= @forum.signature %>',
+      timestamp: <%= @forum.timestamp %>
+    }
+  })
+</script>
